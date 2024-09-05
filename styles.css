@@ -23,6 +23,7 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
+
 /* Section Styling */
 .left-section, .mid-section, .right-section {
     display: flex;
@@ -198,7 +199,7 @@ nav {
 
 .features-section {
     padding: 20px 20px;
-    height: 800px;
+    height: auto;
     background: url(imgs/bgimgs/z2.jpg) no-repeat center center fixed;
     background-size: cover; /* Ensures the image covers the section */
     background-attachment: scroll; /* Change to scroll if fixed is causing issues */
@@ -329,13 +330,31 @@ nav {
     outline-offset: 10px; /* Gap between the border and content */
     border: 1px solid rgb(146, 83, 148);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
     
 }
 
     /* Add this class to show a video container */
     .video-container2.active {
         display: flex;
+
         
+    }
+    @media only screen and (max-width: 767px) {
+        /* Styles for mobile devices */
+        .video-container2 video {
+            width: 100%; /* Adjust to fit the screen width */
+            height: auto; /* Let height adjust automatically based on the width */
+            padding: 0; /* Remove padding for a cleaner fit */
+            margin: 0; /* Center the video */
+            border-radius: 5px; /* Slightly rounded corners */
+            border: none; /* Optional: Remove the border for a sleeker look */
+            box-shadow: none; /* Optional: Remove the shadow to avoid over-styling on small screens */
+            outline-offset: 10px; /* Gap between the border and content */
+            border: 1px solid rgb(146, 83, 148);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
     }
     #FAQ {
         background: url(imgs/bgimgs2/p03.jpg) no-repeat center center fixed;
@@ -354,7 +373,7 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.5);
     }
     .layout {
-        width: 600px;
+        width: auto;
         margin: auto;
     }
      
@@ -364,9 +383,13 @@ nav {
         border: 1px solid rgb(146, 83, 148);
         box-shadow: 0 0 15px rgb(0, 0, 0);
         border-radius: 8px;
-    padding: 10px;
+    
     text-align: center;
     margin-bottom: 25px;
+    width: 50%;
+    translate: 50%;
+
+   
     
     }
     .accordion:hover{
@@ -531,4 +554,107 @@ nav {
     margin-top: 20px;
     font-size: 14px;
     color: #666;
+}
+
+@media only screen and (max-width: 900px) {
+    /* Adjust body for mobile */
+    body {
+        background-size: cover; /* Ensure background fits properly on mobile */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    /* Adjust navbar for mobile */
+    nav {
+        height: 60px; /* Adjust navbar height for mobile */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); /* Less shadow on smaller screens */
+    }
+
+    /* Adjust video section for mobile */
+    .video-section {
+        position: relative; /* Set relative positioning */
+        height: 100vh; /* Ensure section height covers the viewport */
+        width: 100%;
+        overflow: hidden; /* Prevent overflow */
+    }
+
+     /* Video container for mobile */
+     .video-container {
+        position: relative; /* Adjust positioning */
+        height: 100%; /* Ensure it takes full height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Background video for mobile */
+    .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 105%; /* Ensure background video covers the entire container */
+        filter: blur(6px); /* Reduce blur on mobile */
+        object-fit: cover; /* Ensure video covers background area without distortion */
+        z-index: 1; /* Ensure it's behind other content */
+    }
+
+    /* Foreground video for mobile */
+    .foreground-video {
+        position: absolute;
+        top: 15%; /* Align with content overlay */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85vw; /* Match the width to content overlay */
+        height: calc(100vh - 30%); /* Adjust height to fit within visible area */
+        object-fit: cover; /* Ensure the video covers the space */
+        z-index: 2; /* Place behind the content overlay */
+        border-radius: 10px;
+        
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.082);
+    
+    }
+    .foreground-video:hover {
+        border: 1px solid rgb(146, 83, 148);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Content overlay for mobile */
+    .content-overlay {
+        position: absolute;
+        top: 15%; /* Align with the foreground video */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85vw; /* Match the width to foreground video */
+        text-align: center; /* Center text */
+        z-index: 3; /* Ensure it's above the foreground video */
+        padding: 0; /* Remove padding to ensure proper fit */
+        
+    }
+
+    /* Logo styles for mobile */
+    .logo {
+        background: none;
+        border: none;
+        box-shadow: none;
+        position: relative; /* Adjust positioning to relative */
+        top: auto; /* Reset any top value */
+        left: auto; /* Reset any left value */
+        transform: none; /* Reset transform */
+        width: 85vw; /* Match the width to content overlay */
+        margin: 0; /* Remove any margin */
+        padding: 0; /* Remove any padding */
+        
+    }
+    .logo:hover {
+        box-shadow: none;
+        border: none;
+    }
+    /* Adjust explore button for mobile */
+    .explore {
+        padding: 12px 20px; /* Smaller padding for better mobile fit */
+        font-size: 14px; /* Smaller font for mobile */
+    }
 }
