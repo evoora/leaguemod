@@ -586,7 +586,7 @@ nav {
         color: #666;
     }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     /* Adjust body for mobile */
     body {
         background-size: cover; /* Ensure background fits properly on mobile */
