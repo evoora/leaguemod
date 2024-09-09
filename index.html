@@ -36,7 +36,7 @@
     <section class="video-section">
         <div class="video-container">
             
-            <video id="background-video" autoplay loop muted class="background-video">
+            <video id="background-video" autoplay muted playsinline class="background-video">
                 <source src="imgs/lolvid (2).mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -48,7 +48,7 @@
                 </div>
                 
             </div>
-            <video id="foreground-video" autoplay loop muted class="foreground-video">
+            <video id="foreground-video" autoplay muted playsinline class="foreground-video">
                 <source src="imgs/lolvid (2).mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 
@@ -133,7 +133,7 @@
     </section>
 
     <section id="FAQ">
-        <h2>Frequently Asked Questions</h2>
+        <h2 id="faqh2">Frequently Asked Questions</h2>
         <div class="layout">
             <div class="accordion">
                 <div class="accordion__question">
@@ -207,33 +207,40 @@
             </div>
         </section>
     </section>
-    <footer>
-        <div class="footer-content">
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+          <source src="imgs/bgimgs/footerbgvid2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      
+        <footer>
+          <div class="footer-content">
             <div class="footer-section about">
-                <h3>About LeagueMod</h3>
-                <p>LeagueMod simplifies and enhances your League of Legends experience. Join our community and take control of your gameplay.</p>
+              <h3>About LeagueMod</h3>
+              <p>LeagueMod simplifies and enhances your League of Legends experience. Join our community and take control of your gameplay.</p>
             </div>
             <div class="footer-section links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#setup-guide">Setup Guide</a></li>
-                    <li><a href="#FAQ">FAQ</a></li>
-                </ul>
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#setup-guide">Setup Guide</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+              </ul>
             </div>
             <div class="footer-section social">
-                <h3>Join The Community</h3>
-                <ul>
-                    <li><a href="#discord">Discord</a></li>
-                    <li><a href="#github">Github</a></li>
-                    <li><a href="#twitter">Twitter</a></li>
-                </ul>
+              <h3>Join The Community</h3>
+              <ul>
+                <li><a href="#discord">Discord</a></li>
+                <li><a href="#github">Github</a></li>
+                <li><a href="#twitter">Twitter</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="footer-bottom">
+          </div>
+          <div class="footer-bottom">
             <p>&copy; 2024 LeagueMod. All rights reserved.</p>
-        </div>
-    </footer>
+          </div>
+        </footer>
+      </div>
     <script>
     let answers = document.querySelectorAll(".accordion");
         answers.forEach((event) => {

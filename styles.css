@@ -202,7 +202,6 @@ nav {
     height: auto;
     background: url(imgs/bgimgs/z2.jpg) no-repeat center center fixed;
     background-size: cover; /* Ensures the image covers the section */
-    background-attachment: scroll; /* Change to scroll if fixed is causing issues */
     background-position: center center; /* Ensure background is centered */
     background-repeat: no-repeat; /* Prevents repeating the image */
     text-align: center;
@@ -310,6 +309,7 @@ nav {
 
  /* Style for the video containers */
 .video-container2 {
+    
     display: none; /* Hide all video containers by default */
     bottom: 20px; /* Position from the bottom of the viewport */
     padding: 10px; /* Padding around the video */
@@ -359,38 +359,49 @@ nav {
     #FAQ {
         background: url(imgs/bgimgs2/p03.jpg) no-repeat center center fixed;
     background-size: cover; /* Ensures the image covers the section */
-    background-position: top center; /* Ensure background is centered */
+    background-position:  center; /* Ensure background is centered */
     background-repeat: no-repeat; /* Prevents repeating the image */
     height: auto;
     
+    
     }
-    #FAQ h2 {
+    #faqh2{
         margin: 0;
         padding: 20px 0;
         text-align: center;
         font-weight: bold;
     color: #fff;
+    background-color: #0000008e;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.5);
     }
+   
     .layout {
+        background-color: #0000008e;
         width: auto;
         margin: auto;
+        padding-bottom: 30px;
+        
     }
      
     .accordion {
-        background: #0e0e0e94;
+        background: #0000008e;
         color: #fff;
         border: 1px solid rgb(146, 83, 148);
         box-shadow: 0 0 15px rgb(0, 0, 0);
         border-radius: 8px;
-    
     text-align: center;
-    margin-bottom: 25px;
+
     width: 50%;
-    translate: 50%;
+    margin: auto;
+    margin-bottom: 25px;
+    
+    
 
    
     
+    }
+    .accordion:last-child {
+        margin-bottom: 0; /* Removes margin from the last accordion */
     }
     .accordion:hover{
         transform: scale(1.01);
@@ -400,19 +411,21 @@ nav {
      
     .accordion__question p {
         font-weight: bold;
+        
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.5);
     }
      
     .accordion__answer p {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: lighter;
         line-height: 1.6;
         color: #e0e0e0;
         padding-bottom: 20px;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7), -1px -1px 3px rgba(0, 0, 0, 0.3);
-        background-color: rgba(255, 255, 255, 0.034);
+        background-color: rgba(8, 8, 8, 0);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.5);
     }
      
     .accordion:hover {
@@ -428,7 +441,7 @@ nav {
     }
 
     .cta-section {
-        background: #00000000;
+        background: #00000085;
         text-align: center;
         padding: 50px 20px;
         color: #fff;
@@ -441,11 +454,15 @@ nav {
         font-size: 32px;
         margin-bottom: 20px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        
     }
     
     .cta-section p {
         font-size: 18px;
+        color: #ffffff;
+        font-weight: lighter;
         margin-bottom: 40px;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.5);
     }
     
     .cta-buttons {
@@ -456,7 +473,7 @@ nav {
     }
     
     .cta-button {
-        background: #000000ee;
+        background: #000000da;
         color: #fff;
         border: 1px solid rgb(146, 83, 148);
         box-shadow: 0 0 15px rgb(0, 0, 0);
@@ -467,10 +484,10 @@ nav {
     }
     
     .cta-button.secondary {
-        background: #ffffff81;
-        color: #0f0f0fd2;
-        border: none;
-        border-radius: 8px;
+        background: #000000da;
+        color: #fff;
+        border: 1px solid rgb(146, 83, 148);
+        box-shadow: 0 0 15px rgb(0, 0, 0);
         padding: 15px 30px;
         text-decoration: none;
         border-radius: 25px;
@@ -480,81 +497,91 @@ nav {
     .cta-button:hover {
         transform: scale(1.01);
     transition: 0.1s ease-in-out;
+    background: #000000;
     }
     
     .cta-button.secondary:hover {
-        transform: scale(1.03);
+        transform: scale(1.01);
+
     transition: 0.1s ease-in-out;
     }
 
 
-    footer {
-        background-color: #000000;
-        color: #aaa;
-        padding: 40px 0 20px;
-        text-align: center;
-        box-shadow: 0 -1px 15px rgba(0, 0, 0, 0.5);
-        border-top: 1px solid rgba(255, 255, 255, 0.363);
-        box-shadow: 0 0 10px rgba(197, 195, 195, 0.692);
+    .video-background {
+        position: relative;
+        width: 100%;
+        height: auto; /* Adjust the height as needed */
+        overflow: hidden;
     }
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
     
-}
-.footer-section img {
-    width: auto;
-    height: 50px;
-    padding: 3px;
-}
-
-.footer-section h3 {
-    color: #fff;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(248, 248, 248, 0.041), -2px -2px 4px rgba(255, 255, 255, 0.027);
-}
-
-.footer-section p, .footer-section ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-    color: #aaa;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    color: #fff;
-}
-
-.footer-section .social img {
-    width: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-}
-
-.footer-section .social img:hover {
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-}
+    /* Styling for the video element */
+    #bg-video {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        width: 100%;
+        height: 420%;
+        object-fit: cover; /* Ensures the video covers the entire container */
+        z-index: -1;
+        transform: translate(-50%, -30%) scale(1); /* Move video down slightly */
+        filter: brightness(0.7); /* Adjust brightness */
+        object-fit: cover; /* Ensures the video covers the entire container */
+    }
+    /* Content placed over the video */
+    footer {
+        position: relative;
+        z-index: 1;
+        color: #fff; /* White text to stand out against the dark video */
+        background-color: rgba(0, 0, 0, 0.7); /* Optional: Transparent background to enhance readability */
+        padding: 40px 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.432);
+        
+    }
+    
+    /* Footer content sections */
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        color: #aaa;
+    }
+    
+    .footer-section {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .footer-section h3 {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    
+    .footer-section p, .footer-section ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-section ul li a {
+        color: #aaa;
+        text-decoration: none;
+    }
+    
+    .footer-section ul li a:hover {
+        color: #fff;
+    }
+    
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+    }
 
 @media only screen and (max-width: 900px) {
     /* Adjust body for mobile */
@@ -656,5 +683,9 @@ nav {
     .explore {
         padding: 12px 20px; /* Smaller padding for better mobile fit */
         font-size: 14px; /* Smaller font for mobile */
+    }
+    .accordion {
+        width: 80%;
+        padding: 5px 10px;
     }
 }
